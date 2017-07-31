@@ -1,0 +1,27 @@
+#include <Ultrasonic.h>
+Ultrasonic ultrasonic1(6,5);// 6 trig , 5 echo
+Ultrasonic ultrasonic2(8,7);// 8 trig , 7 echo
+Ultrasonic ultrasonic3(4,3);// 4 trig , 3 echo
+Ultrasonic ultrasonic4(2,1);// 2 trig , 1 echo
+
+
+const int buzzer = 7; // pin buzzer
+
+void setup(){
+ pinMode(buzzer,OUTPUT);
+
+}
+
+void loop(){
+ int dist1 = ultrasonic.Ranging(CM);
+ int dist2 = ultrasonic.Ranging(CM);
+ int dist3 = ultrasonic.Ranging(CM);
+ int dist4 = ultrasonic.Ranging(CM);
+if (dist1 < 100 || dist2 < 100 || dist3 < 100 || dist4 < 100) {
+  tone(buzzer,1000);
+     delay(40);
+   noTone(buzzer);
+     delay(dist*4);
+   }
+ delay(100); 
+} 
