@@ -25,35 +25,51 @@ if (dist1 < 100 || dist2 < 100 || dist3 < 100 || dist4 < 100) {
    }
    if (dist1 < 100)
    {
-   
+   //light turns red
    }
    if (dist2 < 100)
    {
-   
+   // light turns red
    }
    if (dist3 < 100)
    {
-   
+      // light turns red
    }
    if (dist4 < 100)
    {
-   
+      // light turns red
    }
       if (dist1 > 100)
    {
-   
+      // light turns orange
    }
       if (dist2 > 100)
    {
-   
+      // light turns orange
    }
       if (dist3 > 100)
    {
-   
+      // light turns orange
    }
       if (dist4 > 100)
    {
-   
+      // light turns orange
+   }
+         if (dist1 > 1000)
+   {
+      // light turns green
+   }
+      if (dist2 > 1000)
+   {
+      // light turns green
+   }
+      if (dist3 > 1000)
+   {
+      // light turns green
+   }
+      if (dist4 > 1000)
+   {
+      // light turns green
    }
  delay(100); 
 } 
