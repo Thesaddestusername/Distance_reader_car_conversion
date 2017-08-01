@@ -23,5 +23,37 @@ if (dist1 < 100 || dist2 < 100 || dist3 < 100 || dist4 < 100) {
    noTone(buzzer);
      delay(dist*4);
    }
+   if (dist1 < 100)
+   {
+   
+   }
+   if (dist2 < 100)
+   {
+   
+   }
+   if (dist3 < 100)
+   {
+   
+   }
+   if (dist4 < 100)
+   {
+   
+   }
+      if (dist1 > 100)
+   {
+   
+   }
+      if (dist2 > 100)
+   {
+   
+   }
+      if (dist3 > 100)
+   {
+   
+   }
+      if (dist4 > 100)
+   {
+   
+   }
  delay(100); 
 } 
