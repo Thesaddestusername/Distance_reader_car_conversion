@@ -1,6 +1,6 @@
 #include <Ultrasonic.h>
 Ultrasonic ultrasonic1(6,5);// 6 trig , 5 echo
-Ultrasonic ultrasonic2(8,7);// 8 trig , 7 echo
+Ultrasonic ultrasonic2(9,8);// 9 trig , 8 echo
 Ultrasonic ultrasonic3(4,3);// 4 trig , 3 echo
 Ultrasonic ultrasonic4(2,1);// 2 trig , 1 echo
 
