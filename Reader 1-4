@@ -18,10 +18,10 @@ void setup(){
 }
 
 void loop(){
- int dist1 = ultrasonic.Ranging(CM);
- int dist2 = ultrasonic.Ranging(CM);
- int dist3 = ultrasonic.Ranging(CM);
- int dist4 = ultrasonic.Ranging(CM);
+ int dist1 = ultrasonic1.Ranging(CM);
+ int dist2 = ultrasonic2.Ranging(CM);
+ int dist3 = ultrasonic3.Ranging(CM);
+ int dist4 = ultrasonic4.Ranging(CM);
 if (dist1 < 100)
 {
   tone(buzzer, dist1 );
