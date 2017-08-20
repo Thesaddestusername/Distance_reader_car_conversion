@@ -22,59 +22,52 @@ void loop(){
  int dist2 = ultrasonic.Ranging(CM);
  int dist3 = ultrasonic.Ranging(CM);
  int dist4 = ultrasonic.Ranging(CM);
-if (dist1 < 100 || dist2 < 100 || dist3 < 100 || dist4 < 100) {
-  tone(buzzer,1000);
+if (dist1 < 100)
+{
+  tone(buzzer, dist1 );
+     delay(40);
+   noTone(buzzer);
+     delay(dist1);
+   }
+   if (dist1 < 100)
+{
+  tone(buzzer, dist1 );
+     delay(40);
+   noTone(buzzer);
+     delay(dist2);
+   }
+   if (dist2 < 100)
+{
+  tone(buzzer, dist2 );
+     delay(40);
+   noTone(buzzer);
+     delay(dist3);
+   }
+    if (dist3 < 100)
+{
+  tone(buzzer, dist3 );
+     delay(40);
+   noTone(buzzer);
+     delay(dist4);
+   }
+   if (dist4 < 100)
+{
+  tone(buzzer, dist4 );
      delay(40);
    noTone(buzzer);
      delay(dist*4);
    }
-   if (dist1 < 100)
+   if (dist1 < 100 || dist2 < 100 || dist3 < 100 || dist4 < 100)
    {
 setColor(255, 0, 0);  // red
    }
-   if (dist2 < 100)
-   {
-setColor(255, 0, 0);  // red
-   }
-   if (dist3 < 100)
-   {
-setColor(255, 0, 0);  // red
-   }
-   if (dist4 < 100)
-   {
-setColor(255, 0, 0);  // red
-   }
-      if (dist1 > 100)
+      if (dist1 > 100 & dist2 > 100 & dist3 > 100 & dist4 > 100 || dist1 < 1000 || dist2 < 1000 || dist3 < 1000 || dist4 < 1000)
    {
 setColor(255,127,80)
    }
-      if (dist2 > 100)
-   {
-setColor(255,127,80)
-   }
-      if (dist3 > 100)
-   {
-setColor(255,127,80)
-   }
-      if (dist4 > 100)
-   {
-setColor(255,127,80)
-   }
-         if (dist1 > 1000)
+         if (dist1 > 1000 && dist2 > 1000 && dist3 > 1000 && dist4 > 1000)
    {
  setColor(0, 255, 0);  // green
-   }
-      if (dist2 > 1000)
-   {
- setColor(0, 255, 0);  // green
-   }
-      if (dist3 > 1000)
-   {
-setColor(0, 255, 0);  // green
-   }
-      if (dist4 > 1000)
-   {
-setColor(0, 255, 0);  // green
    }
  delay(100); 
 } 
