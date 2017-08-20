@@ -1,15 +1,20 @@
 #include <Ultrasonic.h>
 Ultrasonic ultrasonic1(6,5);// 6 trig , 5 echo
-Ultrasonic ultrasonic2(9,8);// 9 trig , 8 echo
+Ultrasonic ultrasonic2(8,7);// 8 trig , 7 echo
 Ultrasonic ultrasonic3(4,3);// 4 trig , 3 echo
 Ultrasonic ultrasonic4(2,1);// 2 trig , 1 echo
-
+int redPin = 11;
+int greenPin = 10;
+int bluePin = 9;
 
 const int buzzer = 7; // pin buzzer
 
 void setup(){
  pinMode(buzzer,OUTPUT);
-
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);  
+  
 }
 
 void loop(){
@@ -25,51 +30,62 @@ if (dist1 < 100 || dist2 < 100 || dist3 < 100 || dist4 < 100) {
    }
    if (dist1 < 100)
    {
-   //light turns red
+setColor(255, 0, 0);  // red
    }
    if (dist2 < 100)
    {
-   // light turns red
+setColor(255, 0, 0);  // red
    }
    if (dist3 < 100)
    {
-      // light turns red
+setColor(255, 0, 0);  // red
    }
    if (dist4 < 100)
    {
-      // light turns red
+setColor(255, 0, 0);  // red
    }
       if (dist1 > 100)
    {
-      // light turns orange
+setColor(255,127,80)
    }
       if (dist2 > 100)
    {
-      // light turns orange
+setColor(255,127,80)
    }
       if (dist3 > 100)
    {
-      // light turns orange
+setColor(255,127,80)
    }
       if (dist4 > 100)
    {
-      // light turns orange
+setColor(255,127,80)
    }
          if (dist1 > 1000)
    {
-      // light turns green
+ setColor(0, 255, 0);  // green
    }
       if (dist2 > 1000)
    {
-      // light turns green
+ setColor(0, 255, 0);  // green
    }
       if (dist3 > 1000)
    {
-      // light turns green
+setColor(0, 255, 0);  // green
    }
       if (dist4 > 1000)
    {
-      // light turns green
+setColor(0, 255, 0);  // green
    }
  delay(100); 
 } 
+void setColor(int red, int green, int blue)
+{
+  #ifdef COMMON_ANODE
+    red = 255 - red;
+    green = 255 - green;
+    blue = 255 - blue;
+  #endif
+  analogWrite(redPin, red);
+  analogWrite(greenPin, green);
+  analogWrite(bluePin, blue);  
+}
