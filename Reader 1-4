@@ -22,46 +22,39 @@ void loop(){
  int dist2 = ultrasonic2.Ranging(CM);
  int dist3 = ultrasonic3.Ranging(CM);
  int dist4 = ultrasonic4.Ranging(CM);
-if (dist1 < 100)
+   if (dist1 < 100)
 {
   tone(buzzer, dist1 );
      delay(40);
    noTone(buzzer);
      delay(dist1);
    }
-   if (dist1 < 100)
-{
-  tone(buzzer, dist1 );
-     delay(40);
-   noTone(buzzer);
-     delay(dist2);
-   }
    if (dist2 < 100)
 {
   tone(buzzer, dist2 );
      delay(40);
    noTone(buzzer);
-     delay(dist3);
+     delay(dist2);
    }
     if (dist3 < 100)
 {
   tone(buzzer, dist3 );
      delay(40);
    noTone(buzzer);
-     delay(dist4);
+     delay(dist3);
    }
    if (dist4 < 100)
 {
   tone(buzzer, dist4 );
      delay(40);
    noTone(buzzer);
-     delay(dist*4);
+     delay(dist4);
    }
    if (dist1 < 100 || dist2 < 100 || dist3 < 100 || dist4 < 100)
    {
 setColor(255, 0, 0);  // red
    }
-      if (dist1 > 100 & dist2 > 100 & dist3 > 100 & dist4 > 100 || dist1 < 1000 || dist2 < 1000 || dist3 < 1000 || dist4 < 1000)
+      if (dist1 > 100 && dist2 > 100 && dist3 > 100 && dist4 > 100 || dist1 < 1000 || dist2 < 1000 || dist3 < 1000 || dist4 < 1000)
    {
 setColor(255,127,80)
    }
@@ -82,3 +75,4 @@ void setColor(int red, int green, int blue)
   analogWrite(greenPin, green);
   analogWrite(bluePin, blue);  
 }
+
